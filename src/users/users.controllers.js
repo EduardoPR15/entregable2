@@ -19,7 +19,12 @@ const filterData = usersDB.find(user => user.id == id)
 return filterData
 
 }
+const deleteUsers = (id) =>{
+    const filterData = usersDB.find(user => user.id == id)
+    console.log(filterData)
 
+
+}
 const createNewUser= (obj) =>{
     const newUser ={
         id: id++,
@@ -36,5 +41,6 @@ const createNewUser= (obj) =>{
 module.exports = {
     createNewUser,
     findAllUsers,
-    findUsersById
+    findUsersById,
+    deleteUsers
 }

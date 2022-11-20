@@ -27,6 +27,26 @@ const getUserById =(req,res) => {
     
 }
 
+const deleteUserById =(req,res) => {
+
+    const id = req.params.id
+
+    const data = userControllers.deleteUsers(id)
+
+
+//     if(data){
+//       res.status(200).json(data)  
+//     }
+//     else{
+//         res.status(404).json({
+//             message: 'invalid ID'
+// }
+//         )
+//     }
+
+    
+}
+
 
 const postNewUser = (req, res) =>{
     const {first_name, last_name, email, password, birthday} = req.body
@@ -52,5 +72,6 @@ const postNewUser = (req, res) =>{
 module.exports={
     postNewUser,
     getAllUsers,
-    getUserById
+    getUserById,
+    deleteUserById
 }
